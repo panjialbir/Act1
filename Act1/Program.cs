@@ -65,7 +65,6 @@ namespace Bubble_Sort
                     }
             }
         }
-    }
         static void Main(String[] args)
         {
             //creating the object of the bubblesort class
@@ -79,6 +78,8 @@ namespace Bubble_Sort
             //exit
             Console.WriteLine("\n\n Tekan Tombol Apa Saja Untk Keluar.");
             Console.Read();
+        }
+      
 
         }
     }
