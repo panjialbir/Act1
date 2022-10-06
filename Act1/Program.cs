@@ -42,8 +42,42 @@ namespace Bubble_Sort
                 Console.WriteLine("================================");
                 Console.WriteLine("Elemen Array Yang Telah Tersusun");
                 Console.WriteLine("================================");
-
+                for (int j = 0; j < n; j++)
+                {
+                    Console.WriteLine(a[j]);
+                }
+                Console.WriteLine("");
+            }
+            public void BubbleSortArray()
+            {
+                for (int i = 1; i < n; i++ )
+                {
+                    //pada past i, bandingkan n - i elemen pertama dengan elemen selanjutnya
+                    for (int j = 0; j < n - i; j++)
+                        if (a[j] > a[j + 1]) //jika elemen tdk dlm urutan yg benar
+                                             //tukar ekemen
+                        { 
+                            int temp;
+                    temp = a[j];
+                    a[j] = a[j + 1];
+                    a[j + 1] = temp;
+                }
             }
         }
+    }
+    static void Main(String[] args)
+    {
+        //creating the object of the bubblesort class
+        Program myList = new Program();
+        //pemanggilan fungsi untuk menerima panggilan array
+        mylist.read();
+        //pemanggilan fungsi utk mengurutkan array
+        myList.BubbleSortArray();
+        //pemanggilan fungsi utk menampilkan array yg tersusun
+        myList.display();
+        //exit
+        Console.WriteLine("\n\n Tekan Tombol Apa Saja Untk Keluar.");
+        Console.Read();
+
     }
 }
